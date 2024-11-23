@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bike Models</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function getBrandModels() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const brand = urlParams.get('brand');
+            const modelsContainer = document.getElementById('modelsContainer');
+
+            if (brand === 'brand1') {
+                modelsContainer.innerHTML = '<h2>Brand 1 Models</h2><p>Model A: Specification A</p><p>Model B: Specification B</p>';
+            } else if (brand === 'brand2') {
+                modelsContainer.innerHTML = '<h2>Brand 2 Models</h2><p>Model C: Specification C</p><p>Model D: Specification D</p>';
+            } else if (brand === 'brand3') {
+                modelsContainer.innerHTML = '<h2>Brand 3 Models</h2><p>Model E: Specification E</p><p>Model F: Specification F</p>';
+            } else if (brand === 'brand4') {
+                modelsContainer.innerHTML = '<h2>Brand 4 Models</h2><p>Model G: Specification G</p><p>Model H: Specification H</p>';
+            } else {
+                modelsContainer.innerHTML = '<h2>Select a brand to see models.</h2>';
+            }
+        }
+    </script>
+</head>
+<body onload="getBrandModels()">
+    <div id="modelsContainer">
+        <h2>Select a brand to see models.</h2>
+    </div>
+</body>
+</html>
