@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #collegeParagraph {
+            font-size: 16px;
+            color: black;
+            transition: all 0.3s ease; /* Smooth transition for style changes */
+        }
+        .highlight {
+            background-color: yellow; /* Highlight color */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Our College</h1>
+    <form id="styleForm" onsubmit="changeStyle(event)">
+        <button type="submit">Change</button>
+    </form>
+    
+    <p id="collegeParagraph">
+        Our college, <strong>ABC College</strong>, is known for its excellent academic programs and vibrant campus life. 
+        We offer a variety of courses in <strong>science</strong>, <strong>arts</strong>, and <strong>engineering</strong>. 
+        Our faculty is dedicated to providing a supportive learning environment.
+    </p>
+
+    <script>
+        function changeStyle(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Change the style of the paragraph
+            const paragraph = document.getElementById('collegeParagraph');
+            paragraph.style.fontFamily = 'Courier New, monospace'; // Change font
+            paragraph.style.fontSize = '20px'; // Change font size
+            paragraph.style.color = 'blue'; // Change text color
+        }
+
+        // Highlight bold words on mouse over
+        const boldWords = document.querySelectorAll('#collegeParagraph strong');
+        boldWords.forEach(word => {
+            word.addEventListener('mouseover', function() {
+                this.classList.add('highlight');
+            });
+            word.addEventListener('mouseout', function() {
+                this.classList.remove('highlight');
+            });
+        });
+    </script>
+</body>
+</html>

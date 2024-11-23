@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            transition: background-color 0.5s; /* Smooth transition for background color change */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Change Background Color</h1>
+    <button onclick="changeBackgroundColor()">Change Color</button>
+
+    <script>
+        function changeBackgroundColor() {
+            // Define an array of colors
+            const colors = ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'pink', 'lightblue', 'lightgreen', 'salmon'];
+
+            // Select a random color from the array
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+            // Change the background color of the document
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>

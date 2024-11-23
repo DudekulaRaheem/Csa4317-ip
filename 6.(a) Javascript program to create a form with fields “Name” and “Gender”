@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Information Form</h1>
+    <form id="userForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const name = document.getElementById('name').value;
+            const gender = document.getElementById('gender').value;
+
+            let missingFields = [];
+
+            if (!name) {
+                missingFields.push("Name");
+            }
+            if (!gender) {
+                missingFields.push("Gender");
+            }
+
+            if (missingFields.length > 0) {
+                alert("Please fill in the following fields: " + missingFields.join(", "));
+                return false; // Prevent form submission
+            }
+
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

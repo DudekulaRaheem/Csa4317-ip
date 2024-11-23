@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Message Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .error-message {
+            color: red; /* Error message color */
+            font-weight: bold; /* Make the text bold */
+            margin-top: 10px; /* Space above the error message */
+        }
+    </style>
+</head>
+<body>
+    <h1>Error Message Generator</h1>
+    <button id="errorButton">Generate Error Message</button>
+
+    <script>
+        document.getElementById('errorButton').addEventListener('click', function() {
+            // Create a new paragraph element
+            const errorElement = document.createElement('p');
+            errorElement.textContent = 'Error! Filename not specified.';
+            errorElement.className = 'error-message'; // Add class for styling
+
+            // Append the error message to the body
+            document.body.appendChild(errorElement);
+        });
+    </script>
+</body>
+</html>
