@@ -1,0 +1,52 @@
+/* a) Use a seashell background color for all pages */
+body {
+    background-color: seashell;
+    font-family: Arial, sans-serif;
+}
+
+/* b) Change the style of the bullets used in the short list of two hyperlinks */
+.custom-bullets {
+    list-style-type: square; /* Change to square bullets */
+    padding-left: 20px; /* Add padding */
+}
+
+/* c) Define alternative colors for all four of the anchor pseudo-classes */
+a {
+    color: blue; /* Default link color */
+}
+
+a:hover {
+    color: green; /* Color when hovering */
+}
+
+a:visited {
+    color: purple; /* Color for visited links */
+}
+
+a:active {
+    color: red; /* Color when the link is clicked */
+}
+
+/* d) Make table captions boldface, and table headers (th) normal weight but italicized */
+caption {
+    font-weight: bold; /* Bold caption */
+}
+
+th {
+    font-style: italic; /* Italic headers */
+    font-weight: normal; /* Normal weight */
+}
+
+/* e) Use a 14-pt sans serif font for all td elements */
+td {
+    font-size: 14pt; /* 14-pt font size */
+    vertical-align: top; /* Force text to display at the top of the cell */
+}
+
+/* Additional styles for definition boxes */
+.definition-box {
+    border: 3px solid yellow; /* 3-px solid yellow border */
+    width: 75%; /* 75% width of the client area */
+    margin: 10px auto; /* Center the box */
+    padding: 10px; /* Padding inside the box */
+}
