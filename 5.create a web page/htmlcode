@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with External Stylesheet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Webpage</h1>
+    </header>
+    
+    <nav>
+        <ul class="custom-bullets">
+            <li><a href="#link1">Link 1</a></li>
+            <li><a href="#link2">Link 2</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Sample Table</h2>
+        <table>
+            <caption>Sample Table Caption</caption>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2" class="top-align">Rowspan Cell</td>
+                    <td>Cell 1</td>
+                </tr>
+                <tr>
+                    <td>Cell 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="definition">
+        <h2>Definitions</h2>
+        <div class="definition-box">
+            <strong>Term 1:</strong> Definition of term 1.
+        </div>
+        <div class="definition-box">
+            <strong>Term 2:</strong> Definition of term 2.
+        </div>
+    </section>
+</body>
+</html>
